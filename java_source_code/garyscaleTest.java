@@ -1,5 +1,3 @@
-package test1;
-
 import java.awt.color.ColorSpace;
 import java.awt.image.BufferedImage;
 import java.awt.image.ColorConvertOp;
