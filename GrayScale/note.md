@@ -4,8 +4,10 @@
 
 土法煉鋼 : 
 
+
 BufferedImage grayscale (BufferedImage bi){
-    BufferedImage bo = new BufferedImage(bi.getWidth(), bi.getHeight(), bi.getType());
+
+    BufferedImage bo = new BufferedImage(bi.getWidth(), bi.getHeight(), bi.getType());
         for(int x = 0;x < bi.getHeight(); x++){
             for(int y = 0; y < bi.getWidth() ; y++){
                 int rgb = bi.getRGB(y, x);
