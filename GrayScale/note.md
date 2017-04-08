@@ -1,7 +1,7 @@
 起因從這篇文章開始 : http://ppt.cc/2QQfM
 在搜尋灰階化範例的時候，發現java有函式庫可以執行灰階化，但不確定其RGB的比例是多少，因此有此測試並順便對比效率
+土法煉鋼程式碼:
 
-土法煉鋼程式碼 : 
 BufferedImage grayscale (BufferedImage bi){
     BufferedImage bo = new BufferedImage(bi.getWidth(), bi.getHeight(), bi.getType());
         for(int x = 0;x < bi.getHeight(); x++){
