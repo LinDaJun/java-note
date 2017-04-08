@@ -42,10 +42,10 @@
     int getBlue(int rgb){
         return rgb & 0xff;
     }
-  
-java 自帶package
-    ColorConvertOp op = new ColorConvertOp(ColorSpace.getInstance(ColorSpace.CS_GRAY), null);
-        grayscaleImage2=op.filter(OriginalImage,null);
+    
+java 函式庫
+    ColorConvertOp op = new ColorConvertOp(ColorSpace.getInstance(ColorSpace.CS_GRAY), null);
+    grayscaleImage2 = op.filter(OriginalImage,null);
 
 至於結果其實還滿明顯的..
 
