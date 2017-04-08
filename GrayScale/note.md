@@ -1,11 +1,11 @@
-起因從這篇文章開始 : http://ppt.cc/2QQfM
+起因是這篇文章:http://ppt.cc/2QQfM
+
 在搜尋灰階化範例的時候，發現java有函示庫可以做灰階化，但不知道其灰階比例是多少?
 因此有此測試並對比效率
 
 土法煉鋼 : 
 
-
-    BufferedImage grayscale (BufferedImage bi){
+    BufferedImage grayscale (BufferedImage bi){
         BufferedImage bo = new BufferedImage(bi.getWidth(), bi.getHeight(), bi.getType());
             for(int x = 0;x < bi.getHeight(); x++){
                 for(int y = 0; y < bi.getWidth() ; y++){
@@ -41,12 +41,12 @@
     }
     int getBlue(int rgb){
         return rgb & 0xff;
-    }
-    
+    }
 java 函式庫
+`
     ColorConvertOp op = new ColorConvertOp(ColorSpace.getInstance(ColorSpace.CS_GRAY), null);
-    grayscaleImage2 = op.filter(OriginalImage,null);
-
+    grayscaleImage2 = op.filter(OriginalImage,null);
+`
 至於結果其實還滿明顯的..
 
 
