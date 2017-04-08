@@ -5,20 +5,19 @@
 土法煉鋼 : 
 
 
-BufferedImage grayscale (BufferedImage bi){
-
-    BufferedImage bo = new BufferedImage(bi.getWidth(), bi.getHeight(), bi.getType());
-        for(int x = 0;x < bi.getHeight(); x++){
-            for(int y = 0; y < bi.getWidth() ; y++){
-                int rgb = bi.getRGB(y, x);
-                int gray = (int)(redPro * getRed(rgb) +greenPro * getGreen(rgb)+bluePro * getBlue(rgb));
-                bo.setRGB(y,x,newGrayRGB(getAlpha(rgb),gray));
+    BufferedImage grayscale (BufferedImage bi){
+        BufferedImage bo = new BufferedImage(bi.getWidth(), bi.getHeight(), bi.getType());
+            for(int x = 0;x < bi.getHeight(); x++){
+                for(int y = 0; y < bi.getWidth() ; y++){
+                    int rgb = bi.getRGB(y, x);
+                    int gray = (int)(redPro * getRed(rgb) +greenPro * getGreen(rgb)+bluePro * getBlue(rgb));
+                    bo.setRGB(y,x,newGrayRGB(getAlpha(rgb),gray));
+                }
             }
-        }
-    return bo;                
-}
-// 輸出轉換後灰階值之RGB
-    int newGrayRGB(int alpha , int gray){
+        return bo;                
+    }
+    // 輸出轉換後灰階值之RGB
+    int newGrayRGB(int alpha , int gray){
         int newPixel = 0; 
         newPixel += (alpha<<24); 
         newPixel = newPixel << 8; 
@@ -45,8 +44,8 @@ BufferedImage grayscale (BufferedImage bi){
     }
   
 java 自帶package
- ColorConvertOp op = new ColorConvertOp(ColorSpace.getInstance(ColorSpace.CS_GRAY), null);
-   grayscaleImage2=op.filter(OriginalImage,null);
+    ColorConvertOp op = new ColorConvertOp(ColorSpace.getInstance(ColorSpace.CS_GRAY), null);
+        grayscaleImage2=op.filter(OriginalImage,null);
 
 至於結果其實還滿明顯的..
 
