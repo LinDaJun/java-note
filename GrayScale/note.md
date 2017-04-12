@@ -53,19 +53,20 @@ java 自帶package:
      ColorConvertOp op = new ColorConvertOp(ColorSpace.getInstance(ColorSpace.CS_GRAY), null);
           grayscaleImage2=op.filter(OriginalImage,null);
 
-至於結果其實還滿明顯的..
+RGB轉換灰度的比例
 
+土法煉鋼的是紅 = 0.3 , 綠 = 0.59 , 藍 = 0.11
+
+package自帶的根據計算推估是 紅 = 0.3 , 綠 = 0.6 , 藍 = 0.1
+
+
+至於結果其實還滿明顯的..
 
 我的秒數從 140~ 100都有
 
 但是函式庫基本上都保持在60 +- 5毫秒
 
+
 對java的理解還是不夠
 
-想知道哪裡還可以改善變得更快?
-
-而RGB轉換灰度的比例
-
-土法煉鋼的是紅 = 0.3 , 綠 = 0.59 , 藍 = 0.11
-
-package自帶的根據計算推估是 紅 = 0.3 , 綠 = 0.6 , 藍 = 0.1
+不知道哪裡還可以改善變得更快?
