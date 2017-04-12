@@ -13,8 +13,8 @@
           for(int x = 0;x < bi.getHeight(); x++){
                for(int y = 0; y < bi.getWidth() ; y++){
                     int rgb = bi.getRGB(y, x);
-                    int gray = (int)(redPro * getRed(rgb) + greenPro * getGreen(rgb)+bluePro * getBlue(rgb));
-		    // redPro = 0.3, greenPro=0.59,bluePro=0.11;
+                    int gray = (int)(redPro * getRed(rgb) + greenPro * getGreen(rgb)+bluePro * getBlue(rgb));
+                    // redPro = 0.3, greenPro=0.59,bluePro=0.11;
                     bo.setRGB(y,x,newGrayRGB(getAlpha(rgb),gray));
                }
           }
